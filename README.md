@@ -9,14 +9,15 @@ There were two objectives:
 1. Essential ingredients for a favorite cuisine
 2. Ingredient recommendation system--for example, if you like 3 types of cuisine, find top similar ingredients
 
-To analyze the data a bit further, Python and Jupyter notebook were used. 
-[Jupyter Notebook](./init-insights.ipynb)
+To analyze the data a bit further, Python and Jupyter notebook were used. See our [Jupyter Notebook](./init-insights.ipynb).
 
 ### Data Cleansing
-<p>The Kaggle dataset we used provided cleaned data in JSON files. However, since we were doing some natural language processing, this required us to refine the data. For example, the dataset had "diced tomatoes" and "canned tomatoes." For the purposes of our project, we wanted to clean modifiers so we're left with just "tomatoes." We also needed to get the stem of the words</p>
+The Kaggle dataset we used provided cleaned data in JSON files. However, since we were doing some natural language processing, this required us to refine the data. For example, the dataset had "diced tomatoes" and "canned tomatoes." For the purposes of our project, we wanted to clean modifiers, so that became "tomatoes." 
 
 ### Machine Learning
-Using Word2vec algorithms, we used machine learning to form a **model.** With the model, we tested "jalapeno chili" to see what ingredients were associated with the recipe. Below shows the corresponding ingredients, all with a high 90% correlation to the recipe.
+Now that the data was prepared, we were able to being creating prediction about the relationships between ingredients in the dataset.
+
+Using Word2vec algorithms, we formed a **model.** Once the model was built, we tested a recipe, "jalapeno chili", to see what ingredients were predicted. Below shows the corresponding ingredients, all with a greater than 90% prediction to the recipe.
 ![image](https://user-images.githubusercontent.com/30424160/104357442-31806080-54db-11eb-93c3-50eea2b1cc17.png)
 
 Then we tested the inverse. We entered in two uncorrelated ingredients to see if the model would know they were unrelated. We thought "fresh pineapple" and "milk" would be a good test. The screenshot below shows that there was only about 6% correlation between those ingredients.
